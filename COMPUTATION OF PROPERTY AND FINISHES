@@ -1,0 +1,102 @@
+ <p>Types of Finishes</p>
+                    <select id="finishes" onchange="calculatePrice()">
+                        <option value="finish1">Rough Finished</option>
+                        <option value="finish2">Basic Finished</option>
+                        <option value="finish3">Standard Finish/Executive Finish</option>
+                        <option value="finish4">Luxurious/High end Finish</option>
+                    </select>
+                
+                    <p>Types of Property</p>
+                    <select id="propertyType" onchange="calculatePrice()">
+                        <option value="apartment">Apartment</option>
+                        <option value="singleHouse">Single House</option>
+                        <option value="condo">Condominium</option>
+                        <option value="duplex">Duplex or quadruplex</option>
+                        <option value="other">Other types of residential property</option>
+                    </select>
+                
+                    <div>
+                        <label for="finishArea">Types of Finishes (sqm)</label>
+                        <input type="text" id="finishArea" oninput="calculatePrice()">
+                    </div>
+                
+                    <div>
+                        <label for="finishPrice">Price</label>
+                        <input type="text" id="finishPrice" readonly>
+                    </div>
+                
+                    <div>
+                        <label for="propertyArea">Types of Property (sqm)</label>
+                        <input type="text" id="propertyArea" oninput="calculatePrice()">
+                    </div>
+                
+                    <div>
+                        <label for="propertyPrice">Price</label>
+                        <input type="text" id="propertyPrice" readonly>
+                    </div>
+                
+                    <div>
+                        <label for="totalPrice">TOTAL PRICE:</label>
+                        <input type="text" id="totalPrice" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center-box">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function calculatePrice() {
+        var finishType = document.getElementById("finishes").value;
+        var propertyType = document.getElementById("propertyType").value;
+        var finishArea = parseFloat(document.getElementById("finishArea").value) || 0;
+        var propertyArea = parseFloat(document.getElementById("propertyArea").value) || 0;
+
+        var finishPrice;
+        switch (finishType) {
+            case "finish1":
+                finishPrice = 22000;
+                break;
+            case "finish2":
+                finishPrice = 25000;
+                break;
+            case "finish3":
+                finishPrice = 30000;
+                break;
+            case "finish4":
+                finishPrice = 42000;
+                break;
+            default:
+                finishPrice = 0;
+        }
+
+        var propertyPrice;
+            switch (propertyType) {
+                case "singleHouse":
+                    propertyPrice = 10482;
+                    break;
+                case "condo":
+                    propertyPrice = 18347;
+                    break;
+                case "apartment":
+                    propertyPrice = 9872;
+                    break;
+                case "duplex":
+                    propertyPrice = 8798;
+                    break;
+                case "other":
+                    propertyPrice = 9693;
+                    break;
+                default:
+                    propertyPrice = 0;
+            }
+
+            var totalPrice = finishArea * finishPrice + propertyArea * propertyPrice;
+
+            document.getElementById("finishPrice").value = finishPrice.toFixed(2);
+            document.getElementById("propertyPrice").value = propertyPrice.toFixed(2);
+            document.getElementById("totalPrice").value = totalPrice.toFixed(2);
+        }
+    </script>
