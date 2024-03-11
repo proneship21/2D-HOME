@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.center-box {
+    width: 100%;
+    height: 90%; /* Adjust width as needed */
+    background-color: #BEBEBE;
+}
+.head {
+    width: 100%;
+    height: 10vh;
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo{
+    width: 200px;
+    height: 100%;
+}
+.logo img{
+    padding-left: 30px;
+    object-fit: contain;
+    width: 100px;
+    height: 100%;
+    
+}
+.menu{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+.menu ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: #cecaca;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.menu ul li i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.menu ul li p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+
+.profile{
+    width: 180px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.profile ul li {
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+.profile ul li:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+.profile ul li i {
+    font-size: 30px; /* Adjust icon size as needed */
+    color: #fff; /* Icon color */
+}
+
+.profile ul li p {
+    margin: 0;
+    color: #fff; /* Text color */
+}
+
+.left {
+    float: left;
+    width: 20%;
+    height: 90vh;
+    background-color: #F5EFE6;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left div:nth-child(1) {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.left div:nth-child(1) select {
+    margin-top: 10px;
+    height: 30px;
+    text-align: center;
+    background-color: #3C23170D;
+    border: transparent;
+    border-radius: 10px;
+}
+.pic-box {
+    width: 250px;
+    height: 150px;
+    background-color: #D9D9D9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.right {
+    float: right;
+    width: 20%;
+    height: 80vh;
+}
+.first-box,
+.sec-box {
+    height: 50%; /* Adjust height as needed */
+    margin-bottom: 5px; /* Add some margin between the boxes */
+    background-color: #F5EFE6;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.newfloor{
+    cursor: pointer;
+}
+.first-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.first-box div:nth-child(2) button {
+    width: 230px;
+    height: 30px;
+    background-color: #0000001A;
+    border: transparent;
+    border-radius: 5px;
+}
+
+.f-s{
+    width: 50px;
+    margin-right: 20px;
+    height: 25px;
+    background-color: #0000001A;
+    border: transparent;
+    border-radius: 5px;
+}
+.s-s{
+    width: 150px;
+    height: 25px;
+    background-color: #0000001A;
+    border: transparent;
+    border-radius: 5px;
+}
+.first-box div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.first-box div:nth-child(4) input {
+    border-radius: 5px;
+    border: transparent;
+    height: 25px;
+    background-color: #0000001A;
+}
+.box {
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    padding: 5px;
+    width: 100%;
+}
+.box strong{
+    padding-left: 20px;
+}
+
+.fb-head{
+    width: 100%;
+    height: 50px;
+    background-color: #3C2317;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.fb-head p{
+ padding-left: 20px;   
+}
+.sb-body{
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sb-body select{
+    width: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.sb-body div{
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.sb-body input{
+    border-radius: 5px;
+    border: transparent;
+    height: 25px;
+    background-color: #0000001A;
+}
